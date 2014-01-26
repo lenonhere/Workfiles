@@ -1,4 +1,4 @@
---BEGIN NC¸¨ÁÏµµ°¸¶ÔÕÕ±í
+--BEGIN NCè¾…æ–™æ¡£æ¡ˆå¯¹ç…§è¡¨
 CREATE TABLE "NBADV"."TRA_AUXI_MATERIAL_TEMP"
  ("NAME"     VARCHAR(100),
   "PK_CORP"  VARCHAR(20),
@@ -15,13 +15,13 @@ ALTER TABLE "NBADV"."TRA_AUXI_MATERIAL_TEMP"
   LOG INDEX BUILD NULL@
 
 COMMENT ON "NBADV"."TRA_AUXI_MATERIAL_TEMP"
- ("NAME" IS 'Ãû³Æ',
-  "PK_CORP" IS 'Ö÷¼ü',
+ ("NAME" IS 'åç§°',
+  "PK_CORP" IS 'ä¸»é”®',
   "ID" IS 'id'
  )@
---END NC¸¨ÁÏµµ°¸¶ÔÕÕ±í
+--END NCè¾…æ–™æ¡£æ¡ˆå¯¹ç…§è¡¨
 
---BEGIN NC¸¨ÁÏ²É¹ºµ¥Ö÷±í
+--BEGIN NCè¾…æ–™é‡‡è´­å•ä¸»è¡¨
 CREATE TABLE "NBADV"."TRA_FL_ORDER_MAIN_TEMP"
  ("PK_CORP"        VARCHAR(20)     NOT NULL,
   "BILLCODE"       VARCHAR(50),
@@ -52,27 +52,27 @@ ALTER TABLE "NBADV"."TRA_FL_ORDER_MAIN_TEMP"
   LOG INDEX BUILD NULL@
 
 COMMENT ON "NBADV"."TRA_FL_ORDER_MAIN_TEMP"
- ("PK_CORP" IS 'NCÖ÷¼ü',
-  "BILLCODE" IS 'µ¥¾Ý±àºÅ',
-  "BILLDATE" IS 'µ¥¾ÝÈÕÆÚ',
-  "SUPPLIER" IS '¹©Ó¦ÉÌid from NC',
-  "SENDCOMPANY" IS '·¢»õ¹«Ë¾id from NC',
-  "OPERATOR" IS 'ÖÆµ¥ÈËid from NC',
-  "MAKEDATE" IS 'ÖÆµ¥ÈÕÆÚ',
-  "COUNTERMAN" IS 'ÒµÎñÔ±id from NC',
-  "DEPT" IS '²¿ÃÅid from NC',
-  "MEMO" IS '±¸×¢',
-  "ISCLOSED" IS 'ÊÇ·ñ¹Ø±Õ',
-  "SENDCOMPANYID" IS '·¢»õ¹«Ë¾id from base platform',
-  "OPERATORID" IS 'ÖÆµ¥ÈËid from base platform',
-  "COUNTERMANID" IS 'ÒµÎñÔ±id from base platform',
-  "DEPARTID" IS '²¿ÃÅid from base platform',
-  "SUPPLIERID" IS '¹©Ó¦ÉÌid from base platform',
-  "ISPROCESSED" IS 'ÊÇ·ñÒÑ¾­×ö¹ýID×ª»»¼Ó¹¤(YÊÇ,N·ñ)'
+ ("PK_CORP" IS 'NCä¸»é”®',
+  "BILLCODE" IS 'å•æ®ç¼–å·',
+  "BILLDATE" IS 'å•æ®æ—¥æœŸ',
+  "SUPPLIER" IS 'ä¾›åº”å•†id from NC',
+  "SENDCOMPANY" IS 'å‘è´§å…¬å¸id from NC',
+  "OPERATOR" IS 'åˆ¶å•äººid from NC',
+  "MAKEDATE" IS 'åˆ¶å•æ—¥æœŸ',
+  "COUNTERMAN" IS 'ä¸šåŠ¡å‘˜id from NC',
+  "DEPT" IS 'éƒ¨é—¨id from NC',
+  "MEMO" IS 'å¤‡æ³¨',
+  "ISCLOSED" IS 'æ˜¯å¦å…³é—­',
+  "SENDCOMPANYID" IS 'å‘è´§å…¬å¸id from base platform',
+  "OPERATORID" IS 'åˆ¶å•äººid from base platform',
+  "COUNTERMANID" IS 'ä¸šåŠ¡å‘˜id from base platform',
+  "DEPARTID" IS 'éƒ¨é—¨id from base platform',
+  "SUPPLIERID" IS 'ä¾›åº”å•†id from base platform',
+  "ISPROCESSED" IS 'æ˜¯å¦å·²ç»åšè¿‡IDè½¬æ¢åŠ å·¥(Yæ˜¯,Nå¦)'
  )@
---END NC¸¨ÁÏ²É¹ºµ¥Ö÷±í
+--END NCè¾…æ–™é‡‡è´­å•ä¸»è¡¨
 
---BEGIN NC¸¨ÁÏ²É¹ºµ¥Ï¸±íCREATE TABLE "NBADV"."TRA_FL_ORDER_DETAIL_TEMP"
+--BEGIN NCè¾…æ–™é‡‡è´­å•ç»†è¡¨CREATE TABLE "NBADV"."TRA_FL_ORDER_DETAIL_TEMP"
  ("PK_CORP"           VARCHAR(20)     NOT NULL,
   "PK_CORP_D"         VARCHAR(20)     NOT NULL,
   "MATERIAL"          VARCHAR(20),
@@ -106,26 +106,26 @@ ALTER TABLE "NBADV"."TRA_FL_ORDER_DETAIL_TEMP"
   LOG INDEX BUILD NULL@
 
 COMMENT ON "NBADV"."TRA_FL_ORDER_DETAIL_TEMP"
- ("PK_CORP" IS 'Ö÷±íid from NC',
-  "PK_CORP_D" IS 'Ï¸±íid from NC',
-  "MATERIAL" IS 'ÎïÁÏid from NC',
-  "STANDARD" IS '°ü×°¹æ¸ñ',
-  "MAINMEASUNIT" IS 'Ö÷¼ÆÁ¿µ¥Î»id from NC',
-  "WEIGHT" IS 'Ö÷ÊýÁ¿',
-  "MEASCONVRATE" IS 'Ö÷¸¨»»ËãÂÊ',
-  "AUXIMEASUNIT" IS '¸¨¼ÆÁ¿µ¥Î»id from NC',
-  "QTY" IS '¸¨ÊýÁ¿',
-  "CROWNO" IS 'ÐÐºÅ',
-  "MEMO" IS '±¸×¢',
-  "ISCLOSED" IS 'ÊÇ·ñ¹Ø±Õ(YÊÇ,N·ñ)',
-  "RECEIVECOMPANY" IS 'ÊÕ»õ¹«Ë¾id from NC',
-  "MANUFACTURER" IS '¼Ó¹¤ÉÌid from NC',
-  "MATERIALID" IS 'ÎïÁÏID',
-  "MAINUNIT" IS 'Ö÷¼ÆÁ¿µ¥Î»',
-  "AUXIUNIT" IS '¸¨¼ÆÁ¿µ¥Î»',
-  "RECEIVECOMPANYID" IS 'ÊÕ»õ¹«Ë¾',
-  "MANUFACTURERID" IS '¼Ó¹¤ÉÌ',
-  "ISPROCESSED" IS 'ÊÇ·ñÒÑ¾­×ö¹ýID×ª»»¼Ó¹¤(YÊÇ,N·ñ)',
-  "ISSYNC" IS 'ÊÇ·ñÍ¬²½½ø¶ÔÓ¦µÄÒµÎñÊý¾Ý±í(YÊÇ,N·ñ)'
+ ("PK_CORP" IS 'ä¸»è¡¨id from NC',
+  "PK_CORP_D" IS 'ç»†è¡¨id from NC',
+  "MATERIAL" IS 'ç‰©æ–™id from NC',
+  "STANDARD" IS 'åŒ…è£…è§„æ ¼',
+  "MAINMEASUNIT" IS 'ä¸»è®¡é‡å•ä½id from NC',
+  "WEIGHT" IS 'ä¸»æ•°é‡',
+  "MEASCONVRATE" IS 'ä¸»è¾…æ¢ç®—çŽ‡',
+  "AUXIMEASUNIT" IS 'è¾…è®¡é‡å•ä½id from NC',
+  "QTY" IS 'è¾…æ•°é‡',
+  "CROWNO" IS 'è¡Œå·',
+  "MEMO" IS 'å¤‡æ³¨',
+  "ISCLOSED" IS 'æ˜¯å¦å…³é—­(Yæ˜¯,Nå¦)',
+  "RECEIVECOMPANY" IS 'æ”¶è´§å…¬å¸id from NC',
+  "MANUFACTURER" IS 'åŠ å·¥å•†id from NC',
+  "MATERIALID" IS 'ç‰©æ–™ID',
+  "MAINUNIT" IS 'ä¸»è®¡é‡å•ä½',
+  "AUXIUNIT" IS 'è¾…è®¡é‡å•ä½',
+  "RECEIVECOMPANYID" IS 'æ”¶è´§å…¬å¸',
+  "MANUFACTURERID" IS 'åŠ å·¥å•†',
+  "ISPROCESSED" IS 'æ˜¯å¦å·²ç»åšè¿‡IDè½¬æ¢åŠ å·¥(Yæ˜¯,Nå¦)',
+  "ISSYNC" IS 'æ˜¯å¦åŒæ­¥è¿›å¯¹åº”çš„ä¸šåŠ¡æ•°æ®è¡¨(Yæ˜¯,Nå¦)'
  )@
---END NC¸¨ÁÏ²É¹ºµ¥Ï¸±í
+--END NCè¾…æ–™é‡‡è´­å•ç»†è¡¨

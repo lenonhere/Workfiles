@@ -1,12 +1,12 @@
---BEGIN NC¸¨ÁÏµµ°¸¶ÔÕÕ±í
+--BEGIN NCè¾…æ–™æ¡£æ¡ˆå¯¹ç…§è¡¨
 -- import from './data/TRA_AUXI_MATERIAL_TEMP.csv' of del 
 -- 	   insert into TRA_AUXI_MATERIAL_TEMP 
 -- @
 select * from TRA_AUXI_MATERIAL_TEMP
 @
---END NC¸¨ÁÏµµ°¸¶ÔÕÕ±í
+--END NCè¾…æ–™æ¡£æ¡ˆå¯¹ç…§è¡¨
 
---BEGIN NC¸¨ÁÏ²É¹ºµ¥Ö÷±í
+--BEGIN NCè¾…æ–™é‡‡è´­å•ä¸»è¡¨
 -- import from './data/TRA_FL_ORDER_MAIN_TEMP.csv' of del 
 -- 	   insert into TRA_FL_ORDER_MAIN_TEMP 
 -- @
@@ -22,9 +22,9 @@ select * from TRA_AUXI_MATERIAL_TEMP
 -- commit;@
 select * from TRA_FL_ORDER_MAIN_TEMP
 @
---END NC¸¨ÁÏ²É¹ºµ¥Ö÷±í
+--END NCè¾…æ–™é‡‡è´­å•ä¸»è¡¨
 
---BEGIN NC¸¨ÁÏ²É¹ºµ¥Ï¸±í
+--BEGIN NCè¾…æ–™é‡‡è´­å•ç»†è¡¨
 -- import from './data/TRA_FL_ORDER_DETAIL_TEMP.csv' of del 
 -- 	   insert into TRA_FL_ORDER_DETAIL_TEMP 
 -- @
@@ -46,4 +46,4 @@ select * from TRA_FL_ORDER_MAIN_TEMP
 -- commit;@
 select * from TRA_FL_ORDER_DETAIL_TEMP
 @
---END NC¸¨ÁÏ²É¹ºµ¥Ï¸±í
+--END NCè¾…æ–™é‡‡è´­å•ç»†è¡¨

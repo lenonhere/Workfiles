@@ -1,4 +1,4 @@
---BEGIN 更新辅料采购单的NC导入的临时表
+--BEGIN 鏇存柊杈呮枡閲囪喘鍗曠殑NC瀵煎叆鐨勪复鏃惰〃
 call T_updateAuxiMatTemp_NC_SYNC(1)
 @
 select count(1) from tra_fl_order_main_temp
@@ -7,9 +7,9 @@ select count(1) from tra_fl_order_main_temp
 select count(1) from tra_fl_order_detail_temp
 	   where isprocessed = 'N' and issync = 'N'
 @
---END 更新辅料采购单的NC导入的临时表
+--END 鏇存柊杈呮枡閲囪喘鍗曠殑NC瀵煎叆鐨勪复鏃惰〃
 
---BEGIN 更新辅料采购单的各类ID
+--BEGIN 鏇存柊杈呮枡閲囪喘鍗曠殑鍚勭被ID
 call T_updateAuxiMat_NC_SWITCH(1)
 @
 select count(a.mainid) from tra_fl_order_main a
@@ -24,5 +24,5 @@ select count(a.detailid) from tra_fl_order_detail a
 select count(a.pk_corp_d) from tra_fl_order_detail_temp a
 	   where not exists(select 1 from tra_fl_order_main_temp b where a.pk_corp = b.pk_corp)
 @
---END 更新辅料采购单的各类ID
+--END 鏇存柊杈呮枡閲囪喘鍗曠殑鍚勭被ID
 
